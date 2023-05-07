@@ -1,0 +1,37 @@
+{
+    "step-types":
+    {
+      "script-module-step":
+      [
+        {
+          "@type-id":"MyExportcatalog",
+          "@supports-parallel-execution":"true",
+          "@supports-site-context":"true",
+          "@supports-organization-context":"true",
+          "description":"Exports the catalog with specific fields.",
+          "module":"app_custom_cartridge/cartridge/scripts/jobs/exportCatalogstep",
+          "function":"myCustomExportCatalog",
+          "transactional":"false",
+          "timeout-in-seconds":"900",
+          "status-codes":
+            {
+                "status":
+                [
+                    {
+                        "@code": "ERROR",
+                        "description": "Used when the step failed with an error."
+                    },
+                    {
+                        "@code": "FINISHED",
+                        "description": "Used when the step finished successfully."
+                    },
+                    {
+                        "@code": "FINISHED_WITH_WARNINGS",
+                        "description": "Used when the step finished with warnings."
+                    }
+                ]
+            }
+        }
+      ]
+    }
+  }
